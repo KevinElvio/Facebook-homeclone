@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(app());
@@ -92,35 +91,42 @@ class _HomepageState extends State<Homepage> {
           color: Color.fromARGB(255, 221, 221, 221),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    alignment: Alignment.center,
-                    width: screenWidth,
-                    margin: EdgeInsets.only(top: 20),
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Container(
-                          width: 90.0,
-                          height: 130.0,
+              Container(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.all(5),
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    height: 140.0,
+                    enableInfiniteScroll: false,
+                    aspectRatio: 16 / 9,
+                    viewportFraction: 0.5,
+                  ),
+                  items: [1, 2, 3, 4, 5].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: screenWidth * 0.8,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
                           decoration: BoxDecoration(
-                              shape: BoxShape
-                                  .rectangle, // Mengatur bentuk kotak menjadi lingkaran
-                              color: Color.fromARGB(255, 180, 180, 180),
-                              borderRadius: BorderRadius.circular(10)),
-                        ),
-                      ],
-                    ),
+                              color: const Color.fromARGB(255, 184, 184, 184)),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: screenWidth,
+                    height: MediaQuery,
+                    margin: EdgeInsets.only(top: 5),
+                    color: Color.fromARGB(255, 255, 255, 255),
                   )
                 ],
               ),
-              Text('test')
             ],
           ),
         ));
