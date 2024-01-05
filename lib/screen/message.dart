@@ -8,7 +8,79 @@ class MessageUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Message UI'),
+        toolbarHeight: 100,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        shadowColor: Color.fromARGB(255, 241, 238, 238),
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    'Facebook',
+                    style: TextStyle(
+                        color: Colors.blue.shade900,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 24),
+                  ),
+                ),
+                const Icon(
+                  Icons.search,
+                  weight: 50,
+                ),
+                const Icon(
+                  Icons.circle,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryanimation) =>
+                                    Homepage(),
+                            transitionsBuilder: (context, animation,
+                                secondaryanimation, child) {
+                              return child;
+                            },
+                            transitionDuration:
+                                const Duration(microseconds: 0)));
+                  },
+                  child: const Icon(
+                    Icons.home,
+                    size: 40,
+                    color: Color.fromARGB(255, 61, 58, 58),
+                  ),
+                ),
+                const Icon(
+                  Icons.forum_outlined,
+                  size: 40,
+                  color: Color.fromARGB(255, 13, 71, 161),
+                ),
+                Icon(
+                  Icons.notifications,
+                  size: 40,
+                  color: Color.fromARGB(255, 61, 58, 58),
+                ),
+                Icon(
+                  Icons.widgets,
+                  size: 40,
+                  color: Color.fromARGB(255, 61, 58, 58),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
       body: Center(
         child: Column(
@@ -20,21 +92,6 @@ class MessageUI extends StatelessWidget {
             ),
             SizedBox(height: 20),
             SizedBox(height: 20),
-            InkWell(
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryanimation) =>
-                            Homepage(),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) {
-                          return child;
-                        },
-                        transitionDuration: Duration(microseconds: 0)));
-              },
-              child: Text('Kembali ke Screen 1'),
-            ),
           ],
         ),
       ),
