@@ -54,6 +54,7 @@ class _HomepageState extends State<Homepage> {
                 const Icon(
                   Icons.home,
                   size: 40,
+                  color: Color.fromARGB(255, 13, 71, 161),
                 ),
                 InkWell(
                   onTap: () {
@@ -73,21 +74,23 @@ class _HomepageState extends State<Homepage> {
                   child: const Icon(
                     Icons.forum_outlined,
                     size: 40,
+                    color: Color.fromARGB(255, 61, 58, 58),
                   ),
                 ),
                 Icon(
                   Icons.notifications,
                   size: 40,
+                  color: Color.fromARGB(255, 61, 58, 58),
                 ),
                 Icon(
                   Icons.widgets,
                   size: 40,
+                  color: Color.fromARGB(255, 61, 58, 58),
                 ),
               ],
             )
           ],
         ),
-        iconTheme: IconThemeData(color: Colors.blue.shade900),
       ),
       body: SingleChildScrollView(
         child: Container(
