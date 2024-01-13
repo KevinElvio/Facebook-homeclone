@@ -67,12 +67,12 @@ class MessageUI extends StatelessWidget {
                   size: 40,
                   color: Color.fromARGB(255, 13, 71, 161),
                 ),
-                Icon(
+                const Icon(
                   Icons.notifications,
                   size: 40,
                   color: Color.fromARGB(255, 61, 58, 58),
                 ),
-                Icon(
+                const Icon(
                   Icons.widgets,
                   size: 40,
                   color: Color.fromARGB(255, 61, 58, 58),
@@ -82,7 +82,7 @@ class MessageUI extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
