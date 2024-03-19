@@ -31,7 +31,7 @@ class _HomepageState extends State<Homepage> {
                   child: Text(
                     'Facebook',
                     style: TextStyle(
-                        color: Colors.blue.shade900,
+                        color: Colors.blue.shade800,
                         fontWeight: FontWeight.w900,
                         fontSize: 24),
                   ),
