@@ -20,7 +20,7 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         toolbarHeight: 100,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        shadowColor: Color.fromARGB(255, 241, 238, 238),
+        shadowColor: Color.fromARGB(255, 241, 238, 237),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
